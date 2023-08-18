@@ -1,18 +1,18 @@
 {
     "layer": "top", 
     "height": 41, 
-    "width": 2560, 
+    //"width": 2560, 
     "spacing": 0, 
-    "modules-left": ["wlr/workspaces"],
+    "modules-left": ["custom/launcher", "wlr/workspaces", "custom/new"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["custom/media", "network", "pulseaudio", "tray", "clock", "custom/shutdown"],
-    "margin": "8px 32px 12px",
+    "margin": "0",
 
     "network": {
         "format": "{ifname}",
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "󰛳  Connected",
-        "format-disconnected": "󰅛  Disconnected",
+        "format-ethernet": "󰛳 ",
+        "format-disconnected": "󰅛 ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} ",
@@ -21,10 +21,14 @@
     },
 
     "wlr/workspaces": {
-        "format": "{icon}",
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+    },
+
+    "custom/new": {
+        "format": "+",
+        "on-click": "hyprctl dispatch workspace empty"
     },
 
     "tray": {
@@ -37,7 +41,7 @@
     },
 
     "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -56,20 +60,25 @@
     },
 
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "{icon}  {}",
         "escape": true,
         "return-type": "json",
-        "max-length": 15,
+        "max-length": 10,
         "on-click": "playerctl play-pause",
-        "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+        "smooth-scrolling-threshold": 10,
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
     },
 
     "custom/shutdown": {
         "format": "",
         "on-click": "sleep 0.1 && ~/.config/rofi/powermenu/powermenu.sh"
+    },
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "sleep 0.1 && ~/.config/rofi/launcher/launcher.sh"
     }
 
 }

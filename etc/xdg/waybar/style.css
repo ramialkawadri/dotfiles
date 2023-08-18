@@ -9,7 +9,6 @@ window#waybar {
     color: #000;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 20px;
     padding: 4px 8px;
 }
 
@@ -36,7 +35,6 @@ button {
 
 #workspaces {
     padding: 4px;
-    padding-left: 8px;
 }
 
 #workspaces button {
@@ -65,11 +63,6 @@ button {
     background-color: #eb4d4b;
 }
 
-#mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
 #clock,
 #battery,
 #cpu,
@@ -95,8 +88,6 @@ button {
 }
 
 #window {
-    background-color: rgb(200, 200, 200);
-    min-width: 480px;
     color: #000;
 }
 
@@ -119,14 +110,6 @@ button {
     background-color: rgb(200, 200, 200);
 }
 
-#custom-shutdown {
-    margin-right: 8px;
-    margin-left: 0;
-    color: #000;
-    font-weight: 600;
-    font-size: 16px;
-}
-
 label:focus {
     background-color: #000000;
 }
@@ -141,12 +124,6 @@ label:focus {
     padding: 8px 12px;
 }
 
-#custom-media {
-    background-color: rgb(200, 200, 200);
-    color: #000;
-    min-width: 120px;
-}
-
 #tray {
     background-color: #1971c2;
 }
@@ -159,4 +136,25 @@ label:focus {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
+
+#custom-launcher {
+    margin: 8px 16px;
+    font-size: 18px;
+    color: #1793D1;
+}
+
+#custom-media {
+    background-color: rgb(200, 200, 200);
+    color: #000;
+    min-width: 120px;
+}
+
+#custom-shutdown {
+    margin-right: 16px;
+    margin-left: 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+}
+
 
