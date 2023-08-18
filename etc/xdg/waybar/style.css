@@ -1,1 +1,158 @@
-/etc/xdg/waybar/style.css
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: HackNerdFont-Regular;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: rgba(245, 245, 245, 0.9);
+    color: #000;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 20px;
+    padding: 4px 8px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces {
+    padding: 4px;
+    padding-left: 8px;
+}
+
+#workspaces button {
+    background-color: rgb(200, 200, 200);
+    border-radius: 20px;
+    margin-right: 8px;
+}
+
+#workspaces button:hover {
+    background: none;
+    border: none;
+    background-color: rgb(180, 180, 180);
+    text-shadow: inherit;
+}
+
+#workspaces button.active {
+    background-color: #1971c2;
+    color: #fff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#window,
+#custom-shutdown,
+#mpd {
+    border-radius: 20px;
+    padding: 0 12px;
+    margin: 4px 4px;
+    color: #fff;
+}
+
+#window {
+    background-color: rgb(200, 200, 200);
+    min-width: 480px;
+    color: #000;
+}
+
+#window.empty {
+    background-color: inherit;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    color: #000;
+    background-color: rgb(200, 200, 200);
+}
+
+#custom-shutdown {
+    margin-right: 8px;
+    margin-left: 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#pulseaudio {
+    background-color: #c92a2a;
+}
+
+
+#network {
+    background-color: #d9480f;
+    padding: 8px 12px;
+}
+
+#custom-media {
+    background-color: rgb(200, 200, 200);
+    color: #000;
+    min-width: 120px;
+}
+
+#tray {
+    background-color: #1971c2;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+

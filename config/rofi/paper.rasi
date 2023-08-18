@@ -1,1 +1,16 @@
-/home/ramikw/.config/rofi/paper.rasi
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Colors
+ **/
+
+* {
+    background:     rgb(245, 245, 245);
+    background-alt: rgb(200, 200, 200);
+    foreground:     #252525FF;
+    selected:       #1971c2;
+    active:         #d9480f;
+    urgent:         #c92a2a;
+}
