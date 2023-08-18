@@ -1,15 +1,4 @@
 #!/usr/bin/env bash
-
-## Author : Aditya Shakya (adi1090x)
-## Github : @adi1090x
-#
-## Rofi   : Power Menu
-#
-## Available Styles
-#
-## style-1   style-2   style-3   style-4   style-5
-
-# Current Theme
 dir="$HOME/.config/rofi/powermenu"
 theme='style'
 
@@ -86,11 +75,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		fi
+        sleep 1; swaylock
         ;;
     $suspend)
 		run_cmd --suspend
