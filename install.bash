@@ -10,6 +10,9 @@ cp ./config/hypr/* ~/.config/hypr
 mkdir -p ~/.config/kitty
 cp ./config/kitty/* ~/.config/kitty
 
+mkdir -p ~/.config/swaylock
+cp ./config/swaylock ~/.config/swaylock
+
 sudo cp ./etc/sddm.conf /etc/sddm.conf
 
 sudo mkdir -p /etc/xdg/waybar
