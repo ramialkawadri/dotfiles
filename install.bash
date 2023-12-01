@@ -21,9 +21,6 @@ sudo cp ./etc/xdg/waybar/* /etc/xdg/waybar
 mkdir -p ~/.config/rofi
 cp -rf ./config/rofi/* ~/.config/rofi
 
-mkdir -p ~/.config/nvim
-cp -rf ./config/nvim/* ~/.config/nvim
-
 mkdir -p /usr/share/sddm/themes
 sudo cp -rf ./usr/share/sddm/themes/sugar-candy/* /usr/share/sddm/themes
 

@@ -8,5 +8,4 @@ cp ~/.config/swaylock/config config/swaylock
 cp /etc/sddm.conf etc
 cp /etc/xdg/waybar/* etc/xdg/waybar
 cp -rf ~/.config/rofi/* config/rofi
-cp -rf ~/.config/nvim/* config/nvim
 cp -rf /usr/share/sddm/themes/sugar-candy usr/share/sddm/themes
